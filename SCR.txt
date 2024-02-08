@@ -1,0 +1,9 @@
+NXP Software Content Register
+--------------------------------------------
+Repository: nfcandroid_infra_comm
+Outgoing License: LA_OPT_NXP_Software_License v49 September 2023 -  Section 2.3 applies
+License File: LICENSE.pdf
+Description and Comments: PN7220/21 Android Infra common Libraries
+Release Location: https://github.com/nxp-nfc-infra/nfcandroid_infra_comm_libs
+Origin: NXP (Proprietary)
+--------------------------------------------
