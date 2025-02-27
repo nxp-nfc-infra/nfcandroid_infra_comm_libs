@@ -1,6 +1,6 @@
 //
 //
-//  Copyright 2023 NXP
+//  Copyright 2023,2025 NXP
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -45,16 +45,6 @@ cc_library_shared {
         "system/nfc/src",
         "system/nfc/src/adaptation",
         "system/nfc/src/adaptation/tda",
-        "system/nfc/src/fuzzers",
-        "system/nfc/src/fuzzers/ce",
-        "system/nfc/src/fuzzers/inc",
-        "system/nfc/src/fuzzers/inc/android/hardware/nfc/1.1",
-        "system/nfc/src/fuzzers/integration",
-        "system/nfc/src/fuzzers/integration/fakes",
-        "system/nfc/src/fuzzers/llcp",
-        "system/nfc/src/fuzzers/nci",
-        "system/nfc/src/fuzzers/ndef",
-        "system/nfc/src/fuzzers/rw",
         "system/nfc/src/gki/common",
         "system/nfc/src/gki/ulinux",
         "system/nfc/src/include",
@@ -64,12 +54,10 @@ cc_library_shared {
         "system/nfc/src/nfa/ee",
         "system/nfc/src/nfa/hci",
         "system/nfc/src/nfa/include",
-        "system/nfc/src/nfa/p2p",
         "system/nfc/src/nfa/rw",
         "system/nfc/src/nfa/sys",
         "system/nfc/src/nfa/tda",
         "system/nfc/src/nfc/include",
-        "system/nfc/src/nfc/llcp",
         "system/nfc/src/nfc/nci",
         "system/nfc/src/nfc/ndef",
         "system/nfc/src/nfc/nfc",
@@ -78,7 +66,6 @@ cc_library_shared {
         "system/nfc/src/rust/hal/ffi",
         "system/nfc/src/rust/nci",
         "system/nfc/src/rust/packets",
-        "system/nfc/src/rust/rootcanal",
         "system/nfc/src/rust/test",
         "system/nfc/utils",
         "system/nfc/utils/include",
