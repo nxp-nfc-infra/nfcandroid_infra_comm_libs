@@ -11,7 +11,7 @@ Infra CL and CT library extensions.
 | Android Version        | NXP Release          | NXP Tag  |
 | :-------------: |:---------------------:| :-----:|
 | android-15.0.0_r1              |  15.01.00 (PN7xxx) |  NFC_AR_INFRA_001E_15.01.00_OpnSrc |
-
+| android-15.0.0_r1              |  15.01.01 (PN716x) | NFC_AR_INFRA_0006_15.01.01_OpnSrc (Supported only for PN716x) |
 
 
 
