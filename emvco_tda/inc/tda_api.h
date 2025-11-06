@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- *  Copyright 2023 NXP
+ *  Copyright 2023, 2025 NXP
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -49,7 +49,8 @@ extern "C" {
  * @return EMVCO_STATUS indicates success or failure
  *
  */
-EMVCO_STATUS ct_init_ext();
+EMVCO_STATUS ct_init_ext(emvco_tda_state_change_t *p_tda_state_change,
+                         emvco_cl_state_change_t *p_cl_state_change);
 /**
  * @brief De-initializes CT
  *

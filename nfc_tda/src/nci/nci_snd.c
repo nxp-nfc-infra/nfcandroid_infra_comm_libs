@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- *  Copyright 2023 NXP
+ *  Copyright 2023,2025 NXP
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -200,7 +200,7 @@ NFC_STATUS send_core_conn_close(uint8_t channel_num) {
   return g_tda_ctrl.ret_status;
 }
 
-void mode_set_ntf_timeout() {
+void mode_set_ntf_timeout(int signum __attribute__((unused))) {
   OSAL_LOG_NFCHAL_D("%s, g_tda_ctrl.mode_set_ctrl.tda_id:%d, "
                       "g_tda_ctrl.mode_set_ctrl.mode:%d \n",
                       __func__, g_tda_ctrl.mode_set_ctrl.tda_id,
