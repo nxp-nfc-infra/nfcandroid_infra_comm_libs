@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- *  Copyright 2023 NXP
+ *  Copyright 2023, 2025 NXP
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -70,6 +70,7 @@ extern "C" {
 #define STATUS_SEMANTIC_ERROR 0x06
 #define MSG_CORE_NFCEE_DISCOVER_RSP_NTF_VAL 0
 #define MSG_CORE_NFCEE_MODESET_RSP_NTF 1
+#define MSG_CORE_INTERFACE_ERROR_NTF 0x08
 #define MSG_CORE_NFCEE_DISCOVER_RSP_LEN 5
 #define MSG_CORE_PROPRIETARY_RSP 2
 #define MSG_RF_DISCOVER_RSP 3

@@ -1,6 +1,6 @@
 /******************************************************************************
  *
- *  Copyright 2023 NXP
+ *  Copyright 2023, 2025 NXP
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -242,6 +242,9 @@ void process_tda_discover_ntf(uint8_t *p_ntf) {
       // (ct_osal_get_nci_hal_ctrl().p_tda_state_change)(p_tda, "TDA Updated");
       break;
     }
+  } else if (current_id == 0xC1 && op_code == MSG_CORE_INTERFACE_ERROR_NTF) {
+    g_tda_ctrl.ret_status = NFC_STATUS_NCI_RESPONSE_ERR;
+    release_ct_lock();
   } else {
     OSAL_LOG_NFCHAL_D("%s unknown opcode:0x%x\n", __func__, op_code);
   }
@@ -402,6 +405,14 @@ NFC_STATUS proc_tda_rsp_ntf(uint8_t *p_ntf, uint16_t p_len) {
         break;
       }
       }
+    case NCI_GID_CORE_VAL: {
+      switch (op_code) {
+      case MSG_CORE_INTERFACE_ERROR_NTF: {
+        process_tda_discover_ntf(p_ntf);
+        break;
+      }
+      }
+    }
     }
     break;
   }

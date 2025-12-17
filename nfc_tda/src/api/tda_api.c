@@ -56,6 +56,8 @@ NFC_STATUS ct_init_ext(void) {
     OSAL_LOG_NFCHAL_E("sem_init failed for snd_lck, errono = 0x%08x",
                       errno);
   }
+
+
   fp_event_handler_t fp_event_handler = handle_event(NFCEE_DISCOVER_EVENT);
   status = fp_event_handler(NULL);
   return status;
@@ -262,7 +264,7 @@ bool is_ct_data_credit_received(uint8_t *p_ntf, uint16_t p_len) {
  */
 NFC_STATUS process_tda_rsp_ntf(uint8_t *p_ntf, uint16_t p_len) {
   pthread_mutex_lock(&g_tda_ctrl.snd_lck);
-  OSAL_LOG_NFCHAL_D("%s p_len:%d", __func__, p_len);
+  OSAL_LOG_NFCHAL_D("%s snd_lck p_len:%d", __func__, p_len);
   NFC_STATUS status = proc_tda_rsp_ntf(p_ntf, p_len);
   pthread_mutex_unlock(&g_tda_ctrl.snd_lck);
   return status;
